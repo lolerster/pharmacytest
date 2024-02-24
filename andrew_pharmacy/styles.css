@@ -84,7 +84,7 @@ footer {
     color: white;
     padding-left: 1vw;
     padding-right: 1vw;
-    font-size: 0.8vw;
+    font-size: 1.2vw;
     font-weight: bold;
     border: none;
     height: 2vw;
@@ -112,7 +112,7 @@ footer {
     text-decoration: none;
     display: block;
     font-weight: bold;
-    font-size: 0.8vw;
+    font-size: 1.2vw;
 }
 
 /* Change color of dropdown links on hover */

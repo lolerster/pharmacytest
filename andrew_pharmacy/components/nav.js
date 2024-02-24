@@ -24,7 +24,7 @@ class Navigation extends HTMLElement {
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="compound.html">Compound Medication</a>
+                    <a href="compound.html">Compounded Medication</a>
                     <a href="deliveries.html">Free Deliveries</a>
                     <a href="home-healthcare.html">Home Healthcare</a>
                     <a href="med-return.html">Medication Return Program</a>
