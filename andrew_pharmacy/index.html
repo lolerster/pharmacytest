@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <title>Andrew's Pharmacy - Home | Pharmasave</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Bootstrap sources-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!--Website components-->
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/nav.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+
+  </head>
+
+  <body>
+
+    <!--Header-->
+    <header-component></header-component>
+
+    <!--Navigation Bar-->
+    <navigation-component></navigation-component>
+
+    <!--Carousel Start-->
+    <!--Initialize carousel-->
+    <script>
+      const myCarouselElement = document.querySelector('#carouselExampleDark')
+      const carousel = new bootstrap.Carousel(myCarouselElement, {
+      interval: 2000,
+      touch: false
+      })        
+    </script>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+
+      <!--Carousel page indicators-->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <!--Page 1-->
+        <div class="carousel-item active" data-bs-interval="10">
+          <img src="images/home-carousel0.png" class="d-block w-100" alt="Minor Ailments">
+          <div class="carousel-caption cslide1">
+              <h2>Feeling a bit under the weather?<br>See if our pharmacists can help!</h2>
+              <a href="https://www.bookmypharmacy.com/minorailment/%28416%29231-0007" target="_blank"><button type="button" class="carousel-learn-more-btn1">Learn More!</button></a>
+          </div>
+        </div>
+
+        <!--Page 2-->
+        <div class="carousel-item" data-bs-interval="10">
+          <img src="images/home-carousel1.png" class="d-block w-100" alt="Compound Meds">
+            <div class="carousel-caption cslide2">
+              <h2>Compound Medication</h5>
+              <p>More EFFECTIVE medications<br>tailored to YOUR needs</p>
+              <a href="compound.html"><button type="button" class="carousel-learn-more-btn2">Learn More!</button></a>
+            </div>
+        </div>
+
+        <!--Page 3-->
+        <div class="carousel-item">
+          <img src="images/carousel-placeholder.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+
+      </div>
+
+      <!--Previous page button-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!--Next page button-->
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+    <!--Carousel End-->
+
+    <div class="card-group row row-cols-1 row-cols-md-3 g-4" style = "width:75%; margin:auto;">
+      <div class="col">
+      <div class="card h-100">
+        <img src="images\4x3-placeholder.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Maybee some kind of prromotions here?</p>
+          <a href="..." class="btn btn-primary">Link</a>
+        </div>
+      </div>
+      </div>
+
+      <div class="col">
+      <div class="card h-100">
+        <img src="images\4x3-placeholder.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some kinda service maybe?</p>
+          <a href="..." class="btn btn-primary">Link</a>
+        </div>
+      </div>
+      </div>
+
+      <div class="col">
+      <div class="card h-100">
+        <img src="images\4x3-placeholder.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">stuffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+          <a href="..." class="btn btn-primary">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="images\4x3-placeholder.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Maybe health advice?</p>
+          <a href="..." class="btn btn-primary">Link</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="images\4x3-placeholder.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Description</p>
+          <a href="..." class="btn btn-primary" styles = "bottom: 0%">Link</a>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+
+    <!--Footer-->
+    <footer-component></footer-component>
+    
+  </body>
+
+</html>

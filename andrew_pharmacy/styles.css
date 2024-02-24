@@ -1,0 +1,197 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    color: #fff;
+    padding-bottom: 11vw;
+}
+
+.container {
+    position:relative;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+.content {
+    max-width: 75%;
+    margin: auto;
+}
+
+.center-content {
+    max-width: 50%;
+    margin: auto;
+}
+
+.title {
+    max-width: 75%;
+    margin: auto;
+}
+
+.title h1{
+    font-weight: bolder;
+}
+
+.title-wrapper{
+    background-color: #cac2c231;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+}
+
+footer {
+    background-color: #c50f3c;
+    color: #000;
+    height: 3vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo-container{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 0.5vw;
+}
+
+#nav {
+    background-color:#c50f3c;
+}
+
+.navigation-link {
+    position: relative;
+    display: inline-block;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: #c50f3c;
+    color: white;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-size: 0.8vw;
+    font-weight: bold;
+    border: none;
+    height: 2vw;
+}  
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7E0A26;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 15vw;
+    z-index: 100;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 1vw 1.2vw;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    font-size: 0.8vw;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #68061D;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #7E0A26;}
+
+/* Change the background color of the dropdown button when hovering over the link*/
+.navigation-link:hover .dropbtn {background-color: #7E0A26;}
+
+.carousel carousel-dark slide {
+    z-index: 2;
+    padding-bottom: 20000px;
+}
+
+.cslide1 {
+    position: relative;
+    top: 10vw;
+    width: 25vw;
+    margin-left: -10vw;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.carousel-learn-more-btn1 {
+    scale:200%;
+    background-color: #be0404;
+    color: #fff;
+    border: none;
+    margin-top: 3vw;
+    padding-bottom: 0.2vw;
+    font-weight: bold;
+}
+
+.carousel-learn-more-btn1:hover {
+    background-color: #460000;
+}
+
+.cslide1 h2 {
+    font-weight: bold;
+    font-size: 1.6vw;
+    color: #460101;
+}
+
+.cslide2 {
+    position: relative;
+    top: 6.5vw;
+    width: 25vw;
+    margin-left: -3.5vw;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.cslide2 h2 {
+    font-weight: bold;
+    font-size: 2vw;
+    color: #460101;
+}
+
+.cslide2 p {
+    font-size: 1.3vw;
+}
+
+.carousel-learn-more-btn2 {
+    position: relative;
+    scale:200%;
+    background-color: #ffb42a;
+    color: #460101;
+    border: none;
+    margin-top: 2vw;
+    padding-bottom: 0.2vw;
+    font-weight: bold;
+}
+
+.carousel-learn-more-btn2:hover {
+    background-color: #ff9735fd;
+}
+
