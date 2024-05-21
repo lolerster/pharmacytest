@@ -198,3 +198,22 @@ nav {
 #showbutton:hover {
     color: rgb(105, 105, 105);
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the list items vertically */
+        align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    .dropdown a {
+        width: 100%; /* Make the links span the full width of the container */
+        text-align: left; /* Align text to the left */
+        padding: 14px 16px; /* Adjust padding if necessary */
+    }
+
+    .dropdown-content {
+        position: static; /* Ensure dropdown is positioned relative to the flow of the document */
+        width: 100%; /* Make the dropdown span the full width */
+    }
+}
