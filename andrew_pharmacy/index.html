@@ -40,7 +40,7 @@
       })        
     </script>
 
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-mdb-interval="true" data-bs-ride="carousel">
 
       <!--Carousel page indicators-->
       <div class="carousel-indicators">
@@ -52,26 +52,28 @@
       <div class="carousel-inner">
 
         <!--Page 1-->
-        <div class="carousel-item active" data-bs-interval="10">
+        <div class="carousel-item active" data-bs-interval="4000" data-bs-touch="true">
           <img src="images/home-carousel0.png" class="d-block w-100" alt="Minor Ailments">
           <div class="carousel-caption cslide1">
-              <h2>Feeling a bit under the weather?<br>See if our pharmacists can help!</h2>
+              <h2 style = "font-weight: bold; font-size: 1.6vw; color: #460101;">Feeling a bit under the weather?<br>See if our pharmacists can help!</h2>
               <a href="https://www.bookmypharmacy.com/minorailment/%28416%29231-0007" target="_blank"><button type="button" class="carousel-learn-more-btn1">Learn More!</button></a>
           </div>
         </div>
 
         <!--Page 2-->
-        <div class="carousel-item" data-bs-interval="10">
+        <div class="carousel-item" data-bs-interval="4000" data-bs-touch="true">
           <img src="images/home-carousel1.png" class="d-block w-100" alt="Compound Meds">
             <div class="carousel-caption cslide2">
-              <h2>Compound Medication</h5>
-              <p>More EFFECTIVE medications<br>tailored to YOUR needs</p>
-              <a href="compound.html"><button type="button" class="carousel-learn-more-btn2">Learn More!</button></a>
+              <div id="carousel-text-wrap" style = "background-color: rgba(223,189,64,0.5); padding-top: 1vw; padding-bottom: 2vw;">
+                <h2 style = "font-weight: bold; font-size: 2vw; color: #460101;">Compounded Medication</h2>
+                <p>More EFFECTIVE medications<br>tailored to YOUR needs</p>
+                <a href="compound.html"><button type="button" class="carousel-learn-more-btn2">Learn More!</button></a>
+              </div>
             </div>
         </div>
 
         <!--Page 3-->
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="4000" data-bs-touch="true">
           <img src="images/carousel-placeholder.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
@@ -153,10 +155,10 @@
     </div>
       
   </div>
-
-    <!--Footer-->
-    <footer-component></footer-component>
     
   </body>
+
+  <!--Footer-->
+  <footer-component></footer-component>
 
 </html>

@@ -4,7 +4,7 @@
 
   <head>
 
-    <title>Andrew's Pharmacy - Location | Pharmasave</title>
+    <title>Andrew's Pharmacy - Location & Hours | Pharmasave</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     
@@ -30,26 +30,119 @@
     <!--Navigation Bar-->
     <navigation-component></navigation-component>
 
+    <!--Page Title-->
     <div class="title-wrapper">
       <div class = "title">
         <h1>Location & Hours</h1>
       </div>
     </div>
 
+    <!--Google Map embed.-->
     <div id="map" class="map content">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.323851537715!2d-79.54102342342196!3d43.641430053191435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b379623aa95c9%3A0x9cacd77c950584cd!2sPharmasave%20Andrew&#39;s%20Pharmacy!5e0!3m2!1sen!2sca!4v1708700984912!5m2!1sen!2sca" style="width:50vw; height:30vw;" style="border:50px; border-color:black" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <p class="content" style = "position: relative;">
-      <strong><br>Andrew's Pharmacy</strong><br>
-      3832 Bloor Street West Suite 1<br>
-      Etobicoke, Ontario<br>
-      M9B 1L1<br>
-    </p>
+    <div class = "content">
+      <div class = "row">
+
+        <!--Pharmacy Address-->
+        <div class = "column">
+          <p>
+              <strong><br>Andrew's Pharmacy</strong><br>
+              3832 Bloor Street West Suite 1<br>
+              Etobicoke, Ontario<br>
+              M9B 1L1<br>
+          </p>
+        </div>
+
+        <!--Pharmacy Hours-->
+        <div class = "column">
+          <p>
+            <p style = "font-weight: bold; margin-bottom: 0; display: inline-block;">Operation Hours</p>
+
+            <!--Button to show/hide all hours.-->
+            <button id = "showbutton" onclick="ShowHideHours()" style = "background-color: white; border: none; padding: none; margin: none; font-size: 0.6vw;">Show All</button>
+
+            <!--Shows current store status.-->
+            <p id = "status" style = "font-weight: bold; margin-bottom: 0;"></p>
+
+            <!--Shows current day & operational hours.-->
+            <p id = "now" style = "margin-bottom: 0;"></p>
+
+            <!--List of Operation hours.-->
+            <div id = "operation_hours">
+              Monday: 12:00 PM - 5:00 PM<br>
+              Tuesday: 12:00 PM - 5:00 PM<br>
+              Wednesday: 12:00 PM - 5:00 PM<br>
+              Thursday: 12:00 PM - 5:00 PM<br>
+              Friday: 12:00 PM - 5:00 PM<br>
+              Saturday: Closed<br>
+              Sunday: Closed<br><br>
+            </div>
+          </p>
+        </div>
+
+      </div>
+    </div>
 
     <!--Footer-->
     <footer-component></footer-component>
-    
+
   </body>
+
+  <script>
+    //Message for each weekday.
+    weekday = ["Sunday: Closed", "Monday: 12:00 PM - 5:00 PM ", "Tuesday: 12:00 PM - 5:00 PM ", "Wednesday: 12:00 PM - 5:00 PM ", "Thursday: 12:00 PM - 5:00 PM ", "Friday: 12:00 PM - 5:00 PM ", "Saturday: Closed"]
+
+    //Get current weekday, hour and minute.
+    const d = new Date();
+    let day = weekday[d.getDay()];
+    let hour = d.getHours();
+    let minute = d.getMinutes();
+
+    //Variables to store pharmacy status text and text colour, based on current day/time. Does not account for holidays.
+    let status = "";
+    let status_color = "#444444"; 
+
+    //Determine current day/time/store status/text color.
+    if (d.getDay == 0 || d.getDay == 6) {
+      status = "Closed Today";
+      status_color = "#4c0000 ";
+    }
+    else {
+      if (hour >= 12 && hour <= 17) {
+        status = "Currently Open";
+        status_color = "#024400";
+      }
+      else {
+        status = "Currently Closed";
+        status_color = "#4c0000 ";
+      }
+    }
+
+    //Show status/day/operation hours with proper text color.
+    document.getElementById("status").innerHTML = status;
+    document.getElementById("now").innerHTML = day;
+    document.getElementById("status").style.color = status_color;
+
+    //Hide all hours on page load. Show all hours on button click. 
+    var op_hours = document.getElementById("operation_hours");
+    op_hours.style.display = "none";
+
+    //Change button to say "Show More"/"Hide All" depending on state of the hour list.
+    //Hide the current day/time when the full list shows.
+    function ShowHideHours() {
+      if (op_hours.style.display === "none") {
+        op_hours.style.display = "block";
+        document.getElementById("showbutton").innerHTML = "Hide All";
+        document.getElementById("now").innerHTML = "";
+      } 
+      else {
+        op_hours.style.display = "none";
+        document.getElementById("showbutton").innerHTML = "Show All";
+        document.getElementById("now").innerHTML = day;
+      }
+    }
+  </script>
 
 </html>
